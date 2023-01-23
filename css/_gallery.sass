@@ -1,0 +1,60 @@
+@use 'variables' as v
+
+.containerGallery
+    width: 100%
+
+    .photos
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        transition: transform .3s lineal
+        img
+            width: 25%
+            height: 350px
+            margin: 0
+            opacity: .5 
+            transition: all .3s ease
+            &:hover
+                opacity: 1
+
+@keyframes animatedPhotos 
+    0% 
+        transform: translate(-0px,0px) 
+    16.6% 
+        transform: translate(-250px,0px) 
+    33.2% 
+        transform: translate(-500px,0px) 
+    50% 
+        transform: translate(-750px,0px) 
+    66.4% 
+        transform: translate(-1000px,0px) 
+    83% 
+        transform: translate(-1250px,0px) 
+    100% 
+        transform: translate(-1500px,0px) 
+   
+   
+
+@media screen and (max-width: 800px) 
+    .containerGallery
+        .photos
+            img
+                width: 25%
+                height: 200px
+               
+    
+
+@media screen and (max-width: 500px) 
+    .containerGallery
+        width: 100%
+        overflow: hidden
+        .photos
+            display: flex
+            flex-direction: row
+            flex-wrap: nowrap
+            animation: animatedPhotos 20s alternate infinite ease
+            img
+                width: 50%
+                height: 250px
+                opacity: 1
+                

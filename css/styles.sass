@@ -1,0 +1,39 @@
+@use 'variables' as v
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap')
+@import header
+@import main
+@import gallery
+@import location
+@import footer
+
+
+
+*
+    margin: 0
+    padding: 0
+    font-family: 'Open Sans', sans-serif
+    box-sizing: border-box
+    body
+        background: v.$color_bg
+        width: 100%
+        min-width: 1440px
+        .titleSection
+            letter-spacing: 5px
+            font-size: 36px
+            margin: 20px 0px 
+            text-transform: capitalize
+            font-weight: 600
+            text-align: center
+
+@media screen and (max-width: 1000px) 
+    body
+        min-width: 1000px
+
+@media screen and (max-width: 800px) 
+    body
+        min-width: 800px
+
+@media screen and (max-width: 500px) 
+    body
+        
+        min-width: 500px

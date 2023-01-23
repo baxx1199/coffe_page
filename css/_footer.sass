@@ -1,0 +1,112 @@
+@use 'variables' as v
+
+footer
+    position: relative
+    height: 400px
+    margin-top: 100px 
+    .wave1
+        width: 100%
+        .w1
+            position: absolute
+            top: -75px
+            z-index: 10
+            width: 100%
+        .w2
+            position: absolute
+            top: 0px
+            z-index: 11
+            width: 100%
+        .w3
+            position: absolute
+            top: -10px
+            z-index: 9
+            width: 100%
+    .contianerInfofooter
+        background: v.$principal_color
+        z-index: 12
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 300px
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        .contactArea
+            width: 50%
+            color: v.$color_bg
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            .ttFooter
+                margin-bottom: 5px
+                font-weight: bold
+                font-size: 42px
+            .whatsApp
+                font-size: 22px
+                margin-bottom: 20px
+            
+            a
+                color: v.$color_bg 
+                text-decoration: none
+            .nIcon
+                font-size: 52px
+
+        .brandArea
+            width: 40%
+            display: flex
+            align-items: center
+            justify-content: right
+            
+            h2
+                font-size: 70px
+                text-align: right
+                line-height: 60px
+                color: v.$second_color
+                display: flex
+                flex-direction: column
+                
+                span
+                    font-size: 80px
+                    color: v.$color_bg
+                    
+@media screen and (max-width: 500px) 
+    footer
+        position: relative
+        height: 400px
+        margin-top: 100px 
+        
+        .contianerInfofooter
+            
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-content: center
+            .contactArea
+                width: 100%
+                order: 2
+                margin-bottom: 30px
+                .ttFooter
+                    margin-bottom: 5px
+                    font-weight: bold
+                    font-size: 35px
+                
+                .nIcon
+                    font-size: 40px
+
+            .brandArea
+                width: 100%
+                justify-content: center
+                order: 1
+                
+                h2
+                    box-sizing: border-box
+                    font-size: 50px
+                    text-align: right
+                    line-height: 45px
+                    border-bottom: 2.5px solid v.$complementary_color
+                    padding: 10px 5px
+                     
+                    span
+                        font-size: 60px
+                        

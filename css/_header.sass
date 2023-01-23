@@ -1,0 +1,138 @@
+@use 'variables' as v
+header
+    background: v.$second_color
+    height: 80vh
+    min-height: 900px
+    background: url(../img/fondo.jpg) v.$principal_color
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-size: cover
+    overflow: hidden
+    nav
+        width: 100%
+        background: v.$complementary_color_half
+        ul
+            width: 100%
+            height: 50px
+            padding-right: 100px
+            margin: auto
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: right
+            align-items: center
+            li
+                list-style: none
+                font-size: 22px
+                color: v.$color_bg
+                padding: 10px 20px
+                cursor: pointer
+                margin: 0px 10px
+                transition: color .3s ease,background .3s ease,transform .3s ease
+                position: relative
+                &:hover
+                    color: v.$auxilir_bg
+                    background: #cccccc24
+                &:active
+                    transform: scale(.9,.9)
+    .container
+        width: 80%
+        margin: auto
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        height: 600px
+        color: v.$color_bg
+        .coffeName
+            font-size: 140px
+            border-right: 5px solid black
+            text-align: right
+            line-height: 120px
+            padding: 20px 0px
+            span
+                font-size: 150px
+        .slogan
+            font-size: 36px
+            align-self: flex-end
+            margin-bottom: 50px
+            font-weight: 300
+            margin-left: -5px
+            border-left: 5px solid black
+            padding: 20px 0px
+            padding-left: 10px
+        
+
+@media screen and (max-width: 1000px)     
+    header
+        .container
+            width: 90%
+            .coffeName
+                font-size: 120px
+                line-height: 100px
+                span
+                    font-size: 130px
+            .slogan
+                font-size: 30px
+                margin-bottom: 70px
+                                   
+
+@media screen and (max-width: 800px) 
+    header
+        nav
+            ul
+                padding: 0
+                flex-wrap: wrap
+                justify-content: center
+                align-items: center
+                li
+                    font-size: 15px
+                    min-width: fit-content
+                    margin: 0px 5px
+        .container
+            width: 90%
+            height: 600px
+            .coffeName
+                font-size: 90px
+                line-height: 80px
+                span
+                    font-size: 100px
+            .slogan
+                font-size: 25px
+                margin-bottom: 100px
+                margin-left: -4.5px
+
+@media screen and (max-width: 500px) 
+    header
+        height: 500px
+        min-height: 500px
+        nav
+            ul
+                li
+                    font-size: 15px
+                    min-width: fit-content
+                    margin: 0px 2px
+                    padding: 5px 10px
+        .container
+            width: 80%
+            height: 400px
+            margin: 20px auto
+            flex-direction: column
+            justify-content: center
+            align-content: center
+            padding-right: 10px
+            border-radius: 15px
+            .coffeName
+                font-size: 64px
+                line-height: 60px
+                border: none
+                span
+                    font-size: 74px
+            .slogan
+                font-size: 22px
+                font-weight: bold
+                margin: 0px auto
+                border: none
+                border-top: 3.5px solid v.$color_texts
+                
+                

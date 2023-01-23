@@ -1,0 +1,17 @@
+@use 'variables' as v
+.locationSection
+    width: 80%
+    margin: auto
+    iframe
+        width: 100%
+        height: 500px
+        border-radius: 15px
+        outline: 3.5px solid v.$color_texts
+        
+@media screen and (max-width: 500px) 
+    .locationSection
+        width: 95%
+        iframe
+            border-radius: 0px
+            outline: 1.5px solid v.$color_texts
+            border: none
