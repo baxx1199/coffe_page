@@ -99,7 +99,6 @@ header .container .slogan {
   }
   header nav ul li {
     font-size: 15px;
-    min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;
     margin: 0px 5px;
@@ -128,7 +127,6 @@ header .container .slogan {
   }
   header nav ul li {
     font-size: 15px;
-    min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;
     margin: 0px 2px;
@@ -216,7 +214,6 @@ header .container .slogan {
   .main .newsness {
     width: 90%;
     max-width: 1000px;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -232,7 +229,6 @@ header .container .slogan {
   .main .newsness {
     width: 100%;
     max-width: 100%;
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     display: flex;
@@ -271,6 +267,13 @@ header .container .slogan {
   border-radius: 15px;
   max-width: 1060px;
   color: #2F2F2F;
+  /* .menuContent::before
+  *  content: ''
+  *  position: absolute
+  *  width: 2.5px
+  *  height: 100%
+  *  background: v.$color_texts
+  *  margin-left: 50% */
 }
 .menu .titleSection {
   width: 100%;
@@ -293,7 +296,6 @@ header .container .slogan {
 }
 .menu .menuContent .menuPage {
   width: 50%;
-  min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
   text-align: center;
@@ -329,13 +331,14 @@ header .container .slogan {
   align-items: center;
 }
 .menu .menuContent .menuPage .card .productDetails .titleProduct {
-  width: 70%;
+  width: 85%;
   color: #FFAD05;
   text-transform: uppercase;
-  font-size: 22px;
+  text-align: left;
+  font-size: 18px;
 }
 .menu .menuContent .menuPage .card .productDetails .price {
-  width: 30%;
+  width: 10%;
   justify-content: flex-end;
 }
 .menu .menuContent .menuPage .card .productDetails .descriptioProduct {
@@ -390,14 +393,6 @@ header .container .slogan {
   width: 20px;
   height: 20px;
 }
-.menu .menuContent::before {
-  content: "";
-  position: absolute;
-  width: 2.5px;
-  height: 100%;
-  background: #2F2F2F;
-  margin-left: 50%;
-}
 
 @media screen and (max-width: 1000px) {
   .menu {
@@ -414,7 +409,6 @@ header .container .slogan {
     width: 45%;
     max-width: 420px;
     text-align: center;
-    min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;
     padding: 0px 10px;
@@ -531,30 +525,6 @@ header .container .slogan {
   opacity: 1;
 }
 
-@-webkit-keyframes animatedPhotos {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  16.6% {
-    transform: translate(-250px, 0px);
-  }
-  33.2% {
-    transform: translate(-500px, 0px);
-  }
-  50% {
-    transform: translate(-750px, 0px);
-  }
-  66.4% {
-    transform: translate(-1000px, 0px);
-  }
-  83% {
-    transform: translate(-1250px, 0px);
-  }
-  100% {
-    transform: translate(-1500px, 0px);
-  }
-}
-
 @keyframes animatedPhotos {
   0% {
     transform: translate(0px, 0px);
@@ -593,8 +563,7 @@ header .container .slogan {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    -webkit-animation: animatedPhotos 20s alternate infinite ease;
-            animation: animatedPhotos 20s alternate infinite ease;
+    animation: animatedPhotos 20s alternate infinite ease;
   }
   .containerGallery .photos img {
     width: 50%;
